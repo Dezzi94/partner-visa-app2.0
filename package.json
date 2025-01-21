@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
     "@playwright/test": "^1.49.1",
     "@radix-ui/react-slot": "^1.1.1",
     "@types/node": "^22.10.7",
