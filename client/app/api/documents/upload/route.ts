@@ -10,18 +10,20 @@ export async function POST(req: NextRequest) {
     const cookieStore = cookies();
     const supabase = createClient();
 
-    // Check authentication
+    // Check authentication using the new getSession method
     const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser();
+      data: { session },
+      error: sessionError,
+    } = await supabase.auth.getSession();
 
-    if (authError || !user) {
+    if (sessionError || !session || !session.user) {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
       );
     }
+
+    const user = session.user;
 
     const formData = await req.formData();
     const file = formData.get("file") as File;
@@ -88,4 +90,4 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
-} 
+}
