@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST={__rewrites:{afterFiles:[],beforeFiles:[],fallback:[]},"/_error":["static/chunks/pages/_error-7a92967bea80186d.js"],"/sentry-example-page":["static/chunks/pages/sentry-example-page-4a71f19f30747284.js"],sortedPages:["/_app","/_error","/sentry-example-page"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
