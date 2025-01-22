@@ -2,7 +2,7 @@ import { createClient } from "@/utils/supabase/server";
 import { NextResponse } from "next/server";
 import { config } from "@/config";
 
-export const runtime = process.env.NODE_ENV === "production" ? "edge" : "nodejs";
+export const runtime = "edge";
 
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);

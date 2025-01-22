@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { Database } from "@/types/supabase";
 
-export const runtime = process.env.NODE_ENV === "production" ? "edge" : "nodejs";
+export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   try {
