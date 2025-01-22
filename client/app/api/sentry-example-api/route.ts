@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+export const runtime = process.env.NODE_ENV === "production" ? "edge" : "nodejs";
 
 // A faulty API route to test Sentry's error monitoring
 export function GET() {
