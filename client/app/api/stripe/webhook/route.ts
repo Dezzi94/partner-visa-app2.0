@@ -5,6 +5,8 @@ import { stripe } from "@/utils/stripe";
 import { createAdminClient } from "@/utils/supabase/admin";
 import { Database } from "@/types/types";
 
+export const runtime = "edge";
+
 // Implement a basic logging mechanism (consider replacing with a more robust solution in production)
 const logger = {
   error: (message: string, meta?: unknown) => console.error(message, meta),
